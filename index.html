@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANJAYA KIRAN CV &amp; Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @media print {
+      body { margin: 0; }
+      section { page-break-inside: avoid; }
+      .link { color: brown; !important}
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Container -->
+  <div class="max-w-5xl mx-auto p-8">
+
+    <!-- Header -->
+    <section class="flex justify-between items-center border-b border-gray-300 pb-6">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight">SANJAYA KIRAN</h1>
+        <p class="text-gray-600 text-sm mt-1">System Architect • Fullstack Developer</p>
+        <div class="w-20 h-1 bg-black mt-3"></div>
+      </div>
+
+      <div class="w-32 h-32 rounded-full overflow-hidden border border-gray-300">
+        <img src="assets/foto_profile.jpg" class="w-full h-full object-cover">
+      </div>
+    </section>
+
+    <!-- Main Grid -->
+    <section class="grid grid-cols-3 gap-8 mt-8">
+
+      <!-- Left Column -->
+      <div class="col-span-1 space-y-8">
+
+        <!-- Contact -->
+        <div>
+          <h2 class="text-xs font-semibold tracking-widest text-gray-500 mb-3">CONTACT</h2>
+          <p class="text-sm">sanjaya.kiran@gmail.com</p>
+          <p class="text-sm"> <a href="https://www.linkedin.com/in/sanjaya-kiran-120a77128/"> linkedin.com/in/sanjaya-kiran-120a77128 </a> </p>
+          <p class="text-sm"> <a href="https://github.com/s41173"> github.com/s41173 </a> </p>
+          <p class="text-sm">+62 82277014410</p>
+        </div>
+
+        <!-- Skills -->
+        <div>
+          <h2 class="text-xs font-semibold tracking-widest text-gray-500 mb-3">SKILLS</h2>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-1 bg-gray-100 rounded">Golang</span>
+            <span class="px-2 py-1 bg-gray-100 rounded">CodeIgniter</span>
+            <span class="px-2 py-1 bg-gray-100 rounded">Laravel</span>
+            <span class="px-2 py-1 bg-gray-100 rounded">MySql, Postgree</span>
+              <span class="px-2 py-1 bg-gray-100 rounded">Redis</span>
+              <span class="px-2 py-1 bg-gray-100 rounded">Docker</span>
+            <span class="px-2 py-1 bg-gray-100 rounded">CI/CD</span>
+              <span class="px-2 py-1 bg-gray-100 rounded">JWT</span>
+            <span class="px-2 py-1 bg-gray-100 rounded">React</span>
+              <span class="px-2 py-1 bg-gray-100 rounded">PWA</span>
+            <span class="px-2 py-1 bg-gray-100 rounded">Express</span>
+            <span class="px-2 py-1 bg-gray-100 rounded">HTML</span>
+            <span class="px-2 py-1 bg-gray-100 rounded">CSS</span>
+            <span class="px-2 py-1 bg-gray-100 rounded">Accounting</span>
+          </div>
+        </div>
+
+        <!-- Highlight -->
+        <div>
+          <h2 class="text-xs font-semibold tracking-widest text-gray-500 mb-3">HIGHLIGHTS</h2>
+          <ul class="text-xs text-gray-700 space-y-1">
+            <li>• Multi-app system architecture</li>
+            <li>• Secure API & authentication middleware design</li>
+            <li>• JWT-based authentication with Redis session</li>
+            <li>• Token invalidation & session control</li>
+            <li>• Local server → cloud sync</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-span-2 space-y-8">
+
+        <!-- About -->
+        <div>
+          <h2 class="text-xs font-semibold tracking-widest text-gray-500 mb-3">PROFILE</h2>
+          <p class="text-sm text-gray-700 leading-relaxed">
+           System-focused backend engineer with 10+ years of experience designing scalable APIs, <br/> multi-application systems, and distributed architectures.<br/>
+           Strong in PHP (CodeIgniter, Laravel), Golang, Nodejs and modern web stacks including React.
+          </p>
+        </div>
+
+        <!-- Portfolio -->
+        <div>
+          <h2 class="text-xs font-semibold tracking-widest text-gray-500 mb-4">PORTFOLIO</h2>
+            
+<!-- Golang -->
+          <div class="mb-6">
+            <h3 class="font-semibold text-base"> GO-REST (API Development Demo) </h3>
+            <p class="text-xs text-gray-500 mb-2"> Designed and developed a backend authentication service using Golang, supporting secure login, OTP verification, and session management. </p>
+
+            <ul class="text-xs text-gray-700 mb-2 space-y-1">
+                
+<li>• Re-architecting and rewriting backend API from Laravel to Golang to improve performance and scalability </li>
+<li>• Built authentication service using Golang with clean service-layer architecture </li>
+<li>• Implemented JWT-based authentication and secure session handling using Redis </li>    
+<li>• Integrated MySQL for persistent user data management </li>
+<li>• Designed RESTful APIs for authentication and user management </li> 
+<li>• Implemented integration testing to validate real-world scenarios </li>
+<li>• Configured CI/CD pipeline using GitHub Actions with automated testing and deployment </li>
+<li>• Deployed and managed service on Railway cloud platform </li>
+                
+    <li> Demo : <a class="link" target="_blank" href="https://github.com/s41173/gorest/"> https://github.com/s41173/gorest/ </a> </li>
+            </ul>
+
+          </div>
+          <!-- Golang -->
+            
+           <!-- ERP -->
+          <div class="mb-6">
+            <h3 class="font-semibold text-base"> Accounting System Platform (Legacy Production Demo) </h3>
+<p class="text-xs text-gray-500 mb-2"> Designed and implemented a Small ERP system integrated with POS, supporting financial and operational workflows in a production environment. </p>
+
+            <ul class="text-xs text-gray-700 mb-2 space-y-1">
+                
+                
+<li>• Designed and developed a small-scale ERP system covering financial and operational modules </li>
+<li>• Implemented core accounting features including journal entries, financial statements, and ratio analysis </li>
+<li>• Built modules for inventory management, Accounts Payable (AP), and Accounts Receivable (AR) </li>    
+<li>• Integrated POS system with ERP for real-time transaction synchronization and financial recording </li>
+<li>• Processed 100+ daily transactions with high accuracy and data consistency </li>
+<li>• Developed backend using CodeIgniter 3 (HMVC) and Laravel 10 (API services) </li> 
+<li>• Implemented dynamic role-based access control (ACL) with module-level permissions </li>
+<li>• Integrated Flip payment gateway for automated payment processing and reconciliation </li>
+<li>• Built audit logging system to track user activity and financial transactions </li>
+<li>• Developed mobile and POS interface using React (SPA/PWA) for transaction handling and approval workflows </li>
+<li>• Designed MySQL database ensuring transactional integrity and reliable reporting </li>
+<li>• Ensured seamless integration across ERP, POS, payment gateway, and mobile systems </li>
+<li>• Supported 10+ active users across multiple operational roles </li>
+                
+                
+<li> Demo : <a class="link" target="_blank" href="https://sysdemo.dswip.com"> https://sysdemo.dswip.com </a> </li>
+<li> Demo M-ERP : <a class="link" target="_blank" href="https://m.dswip.com"> https://m.dswip.com </a> </li>
+<li> Demo POS : <a class="link" target="_blank" href="https://pos.dswip.com"> https://pos.dswip.com </a> </li>
+<li> Pin : 187240</li>
+                <li> User / Pass : demo / demo <br/> <small> * Contact me for authentication issue  </small> </li>
+            </ul>
+
+        <div class="flex gap-3 flex-wrap">
+          <img src="./assets/erp/login.jpg" class="w-40 border rounded-lg shadow">
+          <img src="./assets/erp/dashboard.jpg" class="w-40 border rounded-lg shadow">
+          <img src="./assets/erp/financial_1.jpg" class="w-40 border rounded-lg shadow">
+          <img src="./assets/erp/financial_2.jpg" class="w-40 border rounded-lg shadow">
+          <img src="./assets/erp/ledger.jpg" class="w-40 border rounded-lg shadow">
+              </div> <br/>
+              
+        <h3 class="font-semibold text-base"> Accounting Monitoring &amp; POS Platform (Production Demo) </h3>
+              
+          <div class="flex gap-2">
+              <img src="./assets/merp/login.jpg" class="w-24 border">
+              <img src="./assets/merp/dashboard.jpg" class="w-24 border">
+              <img src="./assets/merp/menu.jpg" class="w-24 border">
+              <img src="./assets/pos/login.jpg" class="w-24 border">
+              <img src="./assets/pos/dashboard.jpg" class="w-24 border">
+          </div>
+              
+          </div>
+          <!-- ERP -->
+            
+          <!-- Laravel -->
+          <div class="mb-6">
+            <h3 class="font-semibold text-base"> LARAVEL-REST (API Development Demo) </h3>
+            <p class="text-xs text-gray-500 mb-2"> Designed and developed a backend authentication service using Laravel 10, supporting secure login, OTP verification, and session management. </p>
+
+            <ul class="text-xs text-gray-700 mb-2 space-y-1">
+                
+<li>• Built authentication service using Laravel 10 with clean service-layer architecture </li>
+<li>• Implemented JWT-based authentication and secure session handling using Redis </li>    
+<li>• Integrated MySQL for persistent user data management </li>
+<li>• Designed RESTful APIs for authentication and user management </li> 
+<li>• Configured CI/CD pipeline using GitHub Actions with automated testing and deployment </li>
+<li>• Deployed and managed service on shared hosting platform </li>
+                
+    <li> Demo : <a class="link" target="_blank" href="https://github.com/s41173/laravel-rest/"> https://github.com/s41173/laravel-rest/</a> </li>
+            </ul>
+
+          </div>
+          <!-- Laravel -->
+            
+            <!-- AsliBos -->
+          <div class="mb-6">
+            <h3 class="font-semibold text-base"> AsliBos Platform (Production Demo) </h3>
+            <p class="text-xs text-gray-500 mb-2"> Lead the development of a distributed anti-counterfeit system consisting of multiple integrated applications across cloud and on-premise environments. </p>
+
+            <ul class="text-xs text-gray-700 mb-2 space-y-1">
+                
+                <li>• Architected and developed multi-system platform (dashboard, API, local server, factory app) </li>
+                <li>• Built scalable backend services with CodeIgniter 3, JWT authentication, and MySQL </li>
+                <li>• Implemented product verification (QR/Barcode) with secure API communication </li>    
+                <li>• Designed reliable data sync between factory (offline/nearline) and cloud systems </li>
+                <li>• Developed audit trail and reporting for product traceability </li> 
+                <li> • Led cross-platform integration (Flutter &amp; Next.js) and ensured system reliability </li>
+                <li> Demo : <a class="link" target="_blank" href="https://aslibos.com"> https://aslibos.com </a> </li>
+                <li> Feel free to contact me for more information. </li>
+            </ul>
+
+            <div class="flex gap-2">
+              <img src="./assets/aslibos/home.jpg" class="w-24 border">
+              <img src="./assets/aslibos/barcode.jpg" class="w-24 border">
+              <img src="./assets/aslibos/partner.jpg" class="w-24 border">
+              <img src="./assets/aslibos/scanner.jpg" class="w-24 border">
+              <img src="./assets/aslibos/qc.jpg" class="w-24 border">
+            </div>
+          </div>
+          <!-- AsliBos -->
+            
+             <!-- Lapakbenz -->
+          <div class="mb-6">
+            <h3 class="font-semibold text-base"> LapakBenz Platform (Development Demo) </h3>
+            <p class="text-xs text-gray-500 mb-2"> Developed a social e-commerce platform for automotive communities, combining membership management, event organization, and online shopping into a single integrated system. </p>
+
+            <ul class="text-xs text-gray-700 mb-2 space-y-1">
+                
+        <li>• Led backend development using CodeIgniter 3 (admin system) and Laravel 10 (API services) </li>
+        <li>• Developed dynamic frontend using React for responsive user experience - PWA </li>    
+        <li>• Implemented JWT-based authentication and secure API architecture </li>
+        <li>• Built PWA-enabled frontend using Vite.js for improved performance and offline capability </li> 
+        <li> • Integrated Flip payment gateway and WhatsApp notification service (Fontee) </li>
+        <li> • Designed scalable database architecture using MySQL </li>
+        <li> • Delivered end-to-end features including membership lifecycle, event system, and e-commerce transactions </li>
+    <li> Demo : <a class="link" target="_blank" href="https://lapakbenz.vercel.app/"> https://lapakbenz.vercel.app/ </a> </li>
+            </ul>
+
+            <div class="flex gap-2">
+              <img src="./assets/lapakbenz/dashboard.jpg" class="w-24 border">
+              <img src="./assets/lapakbenz/event.jpg" class="w-24 border">
+              <img src="./assets/lapakbenz/eventdetail.jpg" class="w-24 border">
+              <img src="./assets/lapakbenz/product.jpg" class="w-24 border">
+              <img src="./assets/lapakbenz/login.jpg" class="w-24 border">
+              <img src="./assets/lapakbenz/register.jpg" class="w-24 border">
+            </div>
+          </div>
+          <!-- Lapakbenz -->
+
+          <!-- Ecommerce -->
+          <div class="mb-6">
+            <h3 class="font-semibold text-base"> E-Commerce Platform (Development Demo) </h3>
+            <p class="text-xs text-gray-500 mb-2"> Designed and developed a full-stack e-commerce system with secure authentication, payment gateway integration, and logistics automation. </p>
+
+            <ul class="text-xs text-gray-700 mb-2 space-y-1">
+<!--
+              <li>• Dashboard & API using CodeIgniter</li>
+              <li>• Local server synchronization</li>
+              <li>• Integrated with cloud system</li>
+-->
+            <li>• Built scalable backend using CodeIgniter 3 with REST API architecture </li>
+              <li>• Implemented JWT-based authentication for secure user sessions</li>
+              <li>• Developed dynamic frontend using React for responsive user experience - PWA </li>    
+                <li>• Integrated Xendit for payment processing (virtual accounts, payments) </li>
+              <li>• Integrated Borzo API for automated delivery and courier management </li> 
+                <li> • Managed product catalog, cart system, and order lifecycle </li>
+                <li> • Designed MySQL database schema for transactional consistency </li>
+                <li> Demo : <a class="link" target="_blank" href="https://shop.dswip.com"> https://shop.dswip.com </a> </li>
+            </ul>
+
+            <div class="flex gap-2">
+              <img src="./assets/shop/home.png" class="w-24 border">
+              <img src="./assets/shop/produk.png" class="w-24 border">
+              <img src="./assets/shop/prodetail.png" class="w-24 border">
+              <img src="./assets/shop/profile.png" class="w-24 border">
+              <img src="./assets/shop/login.jpg" class="w-24 border">
+            </div>
+          </div>
+            <!-- Ecommerce -->
+
+        </div>
+
+      </div>
+      </section>
+
+    </div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+  <span class="absolute top-5 right-8 text-white text-3xl cursor-pointer" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" class="max-w-[90%] max-h-[90%] rounded-lg shadow-lg">
+</div>
+
+<script>
+  function openLightbox(src) {
+    const lightbox = document.getElementById("lightbox");
+    const img = document.getElementById("lightbox-img");
+
+    img.src = src;
+    lightbox.classList.remove("hidden");
+    lightbox.classList.add("flex");
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById("lightbox");
+
+    lightbox.classList.add("hidden");
+    lightbox.classList.remove("flex");
+  }
+
+  // 🔥 HANYA portfolio images (tidak termasuk foto profile)
+  document.querySelectorAll(".col-span-2 img").forEach(img => {
+    img.style.cursor = "pointer";
+    img.addEventListener("click", function () {
+      openLightbox(this.src);
+    });
+  });
+
+  // klik background untuk close
+  document.getElementById("lightbox").addEventListener("click", function(e) {
+    if (e.target.id === "lightbox") {
+      closeLightbox();
+    }
+  });
+</script>
+
+    
+</body>
+</html>
