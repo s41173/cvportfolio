@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Pitch: Strategic Smart Campus Transformation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; background-color: #ffffff; color: #1e293b; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+        .text-gradient { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-padding { padding: 6rem 1.5rem; }
+        .card-detailed { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 2rem; padding: 3rem; transition: all 0.4s ease; }
+        .card-detailed:hover { border-color: #3b82f6; transform: translateY(-8px); shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); }
+        .impact-pill { background: #f0fdf4; color: #166534; padding: 0.5rem 1rem; border-radius: 99px; font-weight: 700; font-size: 0.875rem; display: inline-block; }
+        
+        /* ... kode style Anda yang sebelumnya ... */
+
+        @media print {
+            /* Memaksa background & warna muncul di print */
+            body { 
+                -webkit-print-color-adjust: exact !important; 
+                print-color-adjust: exact !important; 
+                background-color: #ffffff !important;
+            }
+            
+            .gradient-bg { 
+                background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%) !important;
+                color: white !important;
+            }
+
+            .bg-slate-50 { background-color: #f8fafc !important; }
+            .bg-slate-900 { background-color: #0f172a !important; color: white !important; }
+            .bg-blue-50 { background-color: #eff6ff !important; }
+            
+            /* Menyesuaikan teks gradasi agar tetap terbaca */
+            .text-gradient { 
+                background: none !important;
+                -webkit-text-fill-color: initial !important;
+                color: #2563eb !important; /* Biru solid untuk print */
+                font-weight: 800;
+            }
+
+            /* Mencegah pemotongan card di tengah halaman */
+            .card-detailed, section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            /* Menghilangkan tombol jika masih ada yang tidak ter-comment */
+            button, .btn, a[href^="#"] {
+                display: none !important;
+            }
+
+            /* Memastikan gambar muncul */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            
+            /* Margin halaman */
+            @page {
+                margin: 1cm;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 gradient-bg text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 -left-20 w-96 h-96 bg-blue-500 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 -right-20 w-96 h-96 bg-purple-500 rounded-full blur-[120px]"></div>
+        </div>
+        
+        <div class="max-w-5xl relative z-10">
+            <span class="px-6 py-2 border border-blue-400/30 rounded-full text-blue-300 text-sm font-bold tracking-[0.2em] uppercase">Executive Strategy</span>
+            <h1 class="text-5xl md:text-8xl font-extrabold mt-8 leading-tight tracking-tight">
+                Membangun Kemandirian <br> <span class="text-blue-400">Digital Kampus</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mt-10 max-w-3xl mx-auto leading-relaxed font-light">
+                Transformasi bertahap untuk menghentikan ketergantungan pada vendor, mengoptimalkan biaya operasional, dan meningkatkan nilai jual institusi.
+            </p>
+<!--
+            <div class="mt-12">
+                <a href="#strategy" class="px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-bold shadow-2xl transition-all inline-block">Pelajari Roadmap Strategis</a>
+            </div>
+-->
+        </div>
+    </header>
+
+    <section class="section-padding bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-extrabold mb-8">Dimana Posisi Kita <br><span class="text-blue-600">Saat Ini?</span></h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                        Kampus telah memiliki pondasi yang kuat pada sistem keuangan. Namun, pertumbuhan kita tertahan oleh ekosistem digital yang terfragmentasi.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">📊</div>
+                            <p class="text-slate-700"><strong>Data Terisolasi:</strong> Sistem akademik pihak ketiga sulit diintegrasikan secara *real-time* dengan sistem keuangan internal.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center shrink-0">🐢</div>
+                            <p class="text-slate-700"><strong>Performa Digital:</strong> Website yang lambat bukan hanya masalah teknis, tapi merupakan "kebocoran" pada corong pendaftaran mahasiswa baru.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-[2.5rem] shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1551288049-bbda38a594a0?auto=format&fit=crop&q=80&w=800" alt="Data Analytics" class="rounded-[2rem]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 uppercase tracking-widest text-slate-400">Analisis Dampak Bisnis</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-detailed">
+                    <h3 class="text-2xl font-bold mb-4">Operational Overload</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Staff admin menghabiskan 60% waktu mereka untuk tugas repetitif: menjawab pertanyaan manual & verifikasi status bayar.</p>
+                    <div class="text-red-500 font-bold text-sm">RISIKO: Inefisiensi Budget SDM & Human Error.</div>
+                </div>
+                <div class="card-detailed">
+                    <h3 class="text-2xl font-bold mb-4">Loss of Data Control</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Ketergantungan pada vendor pihak ketiga membuat kita sulit melakukan inovasi fitur secara mandiri dan cepat.</p>
+                    <div class="text-red-500 font-bold text-sm">RISIKO: Terhambatnya Skalabilitas Kampus.</div>
+                </div>
+                <div class="card-detailed">
+                    <h3 class="text-2xl font-bold mb-4">Experience Gap</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Generasi mahasiswa saat ini mengharapkan respon instan. Keterlambatan respon berarti kehilangan potensi pendaftar.</p>
+                    <div class="text-red-500 font-bold text-sm">RISIKO: Penurunan Reputasi & Daya Saing.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="strategy" class="section-padding bg-slate-900 text-white overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-20">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-center italic">Strategi "Cepat & Terukur"</h2>
+                <p class="text-center text-slate-400 max-w-2xl mx-auto">Kami tidak menyarankan perombakan total yang berisiko tinggi. Kami memulai dengan hasil yang langsung dirasakan manfaatnya oleh institusi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+                <div>
+                    <span class="text-blue-500 font-bold tracking-widest uppercase">Quick Win #1</span>
+                    <h3 class="text-3xl font-bold mt-4 mb-6">Modernizing The Digital Gate (Website)</h3>
+                    <p class="text-slate-400 leading-relaxed text-lg mb-8">
+                        Bukan sekadar mengganti tampilan, tapi melakukan optimasi *Backend Architecture*, *Caching*, dan *Asset Management*. Website yang cepat meningkatkan konversi calon mahasiswa dan memberikan impresi pertama yang profesional.
+                    </p>
+                    <div class="impact-pill">Impact: User Experience +50% | Image Institusi Naik</div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Website Performance" class="rounded-3xl shadow-2xl">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center flex-row-reverse mb-32">
+                <div class="md:order-2">
+                    <span class="text-purple-500 font-bold tracking-widest uppercase">Quick Win #2</span>
+                    <h3 class="text-3xl font-bold mt-4 mb-6">24/7 AI-Driven Concierge</h3>
+                    <p class="text-slate-400 leading-relaxed text-lg mb-8">
+                        Implementasi Chatbot berbasis AI di WhatsApp dan Website. Bot ini mampu menjawab 80% pertanyaan umum (pendaftaran, jadwal, biaya) secara instan, membebaskan staf admin untuk fokus pada hal strategis.
+                    </p>
+                    <div class="impact-pill">Impact: Beban Admin -40% | Respon Layanan Instan</div>
+                </div>
+                <div class="md:order-1">
+                    <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800" alt="AI Interface" class="rounded-3xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold mb-12 italic">The End Game: Kemandirian Sistem</h2>
+            <div class="space-y-8 text-left">
+                <div class="p-8 border-l-4 border-blue-600 bg-slate-50">
+                    <h4 class="text-xl font-bold mb-2">Integrasi Internal (3-6 Bulan)</h4>
+                    <p class="text-slate-600 leading-relaxed">Menarik seluruh data dari vendor pihak ketiga ke dalam *Data Layer* milik kampus sendiri. Hasilnya: Laporan keuangan dan akademik tersinkronisasi tanpa input manual ulang.</p>
+                </div>
+                <div class="p-8 border-l-4 border-purple-600 bg-slate-50">
+                    <h4 class="text-xl font-bold mb-2">AI Dashboard for Owner (12 Bulan+)</h4>
+                    <p class="text-slate-600 leading-relaxed">Dashboard pintar yang memberikan prediksi arus kas (cashflow), tren minat mahasiswa baru, dan efisiensi biaya operasional per fakultas secara *real-time*.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-blue-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Mengapa Strategi Ini Aman?</h2>
+            <div class="grid md:grid-cols-2 gap-6 text-left">
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <h5 class="font-bold mb-2 text-blue-600">Implementasi Paralel</h5>
+                    <p class="text-sm text-slate-600">Sistem lama tidak dimatikan. Kami membangun lapisan baru di atasnya hingga transisi benar-benar siap.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <h5 class="font-bold mb-2 text-blue-600">Zero Investment Waste</h5>
+                    <p class="text-sm text-slate-600">Setiap fase memberikan hasil nyata. Jika fase 1 berhasil, baru lanjut ke fase berikutnya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-extrabold mb-8 leading-tight text-gradient">Mulai Transformasi <br>Hari Ini.</h2>
+            <p class="text-xl text-slate-500 mb-12 leading-relaxed">
+                "Kita tidak perlu menjadi yang terbesar dalam satu malam, tapi kita harus menjadi yang paling tanggap terhadap perubahan teknologi."
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+<!--                <button onclick="window.scrollTo(0,0)" class="px-12 py-6 bg-blue-600 text-white rounded-[2rem] font-bold text-xl hover:bg-blue-700 shadow-2xl shadow-blue-300 transition-all">Setujui Prototype Fase 1</button>-->
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-400 text-xs uppercase tracking-[0.4em] border-t border-slate-100">
+        Internal Presentation &copy; 2026 Smart Campus Vision
+    </footer>
+
+</body>
+</html>
