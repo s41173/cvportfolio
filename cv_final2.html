@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjaya Kiran — Backend Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --surface: #161616;
+      --border: #2a2a2a;
+      --accent: #c8f135;
+      --accent2: #3dffc0;
+      --text: #e8e8e8;
+      --muted: #888;
+      --label: #555;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @media print {
+      body { background: white !important; color: #111 !important; }
+      .container { max-width: 100% !important; padding: 0 !important; }
+      :root {
+        --bg: white;
+        --surface: #f5f5f5;
+        --border: #ddd;
+        --accent: #3a7d00;
+        --accent2: #007a5e;
+        --text: #111;
+        --muted: #444;
+        --label: #777;
+      }
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    /* HEADER */
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 36px;
+      margin-bottom: 48px;
+      position: relative;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      left: -40px;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 48px;
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .name span {
+      color: var(--accent);
+    }
+
+    .role {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--accent2);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .contact-item {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-item a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-item a:hover { color: var(--accent); }
+
+    .dot {
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* SECTION */
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--label);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* SUMMARY */
+    .summary {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.8;
+      border-left: 2px solid var(--accent);
+      padding-left: 16px;
+      font-weight: 300;
+    }
+
+    .summary strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .skill-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 12px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    .skill-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent2);
+    }
+
+    .skill-value {
+      font-size: 12px;
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    /* EXPERIENCE */
+    .exp-item {
+      margin-bottom: 32px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .exp-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .exp-item::after {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 16px;
+      width: 1px;
+      height: calc(100% - 8px);
+      background: var(--border);
+    }
+
+    .exp-item:last-child::after { display: none; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .exp-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .exp-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 12px;
+      color: var(--accent2);
+      margin-bottom: 10px;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .exp-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .exp-list li {
+      font-size: 12.5px;
+      color: var(--muted);
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .exp-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 10px;
+      top: 2px;
+    }
+
+    /* PROJECTS */
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .project-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+      background: rgba(200, 241, 53, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(200, 241, 53, 0.2);
+    }
+
+    .project-badge.prod {
+      background: rgba(61, 255, 192, 0.1);
+      color: var(--accent2);
+      border-color: rgba(61, 255, 192, 0.2);
+    }
+
+    .project-stack {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--label);
+      margin-bottom: 12px;
+    }
+
+    .project-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .project-list li {
+      font-size: 12px;
+      color: var(--muted);
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .project-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--accent2);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .project-link:hover { color: var(--accent); }
+
+    /* ADDITIONAL */
+    .additional-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+
+    .additional-item:last-child { border-bottom: none; }
+
+    .additional-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .additional-desc {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .additional-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--label);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="name">Sanjaya <span>Kiran</span></div>
+    <div class="role">Backend Engineer · Golang · REST API · Distributed Systems</div>
+    <div class="contact-grid">
+      <div class="contact-item"><span class="dot"></span> sanjaya.kiran@gmail.com</div>
+      <div class="contact-item"><span class="dot"></span> +62 822-7701-4410</div>
+      <div class="contact-item"><span class="dot"></span> <a href="https://github.com/s41173" target="_blank">github.com/s41173</a></div>
+      <div class="contact-item"><span class="dot"></span> <a href="https://linkedin.com/in/sanjaya-kiran-120a77128" target="_blank">linkedin.com/in/sanjaya-kiran</a></div>
+      <div class="contact-item"><span class="dot"></span> <a href="https://cvportfolio-sooty.vercel.app" target="_blank">cvportfolio-sooty.vercel.app</a></div>
+      <div class="contact-item"><span class="dot"></span> Medan, Indonesia</div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section">
+    <div class="section-label">Profile</div>
+    <p class="summary">
+      Backend Engineer with <strong>10+ years</strong> of experience designing and shipping production-grade APIs and distributed systems.
+      Currently migrating a <strong>social e-commerce platform</strong> from CodeIgniter 3 to <strong>Golang</strong> — implementing Redis caching,
+      JWT/OAuth2 auth, payment gateway integration, pub/sub notification, and CI/CD pipelines.
+      Strong background in <strong>system integration</strong>, high-performance architecture, and incremental migration strategies.
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <div class="section-label">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">Languages</span>
+        <span class="skill-value">Golang, PHP, JavaScript (Node.js)</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Frameworks</span>
+        <span class="skill-value">Gin, GORM, CodeIgniter 3, Laravel, Express JS</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Database & Cache</span>
+        <span class="skill-value">MySQL, PostgreSQL, Redis (cache, session, pub/sub, rate limit)</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Auth & Security</span>
+        <span class="skill-value">JWT, Google OAuth2, Redis Session, Rate Limiting</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Integrations</span>
+        <span class="skill-value">Flip - Xendit (Payment),  RajaOngkir (Shipping), WhatsApp API</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">DevOps & Tools</span>
+        <span class="skill-value">GitHub Actions CI/CD, Docker, Swagger, Zap Logger</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Concepts</span>
+        <span class="skill-value">Goroutines, Channels, WaitGroup, DB Indexing, Connection Pooling</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Frontend</span>
+        <span class="skill-value">React, Vite, Tailwind CSS, Zustand, React Query</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-label">Work Experience</div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">System Architect & Backend Developer</div>
+        <div class="exp-date">2020 — Present</div>
+      </div>
+      <div class="exp-company">AsliBos Platform · Production System</div>
+      <ul class="exp-list">
+        <li>Architected multi-application anti-counterfeit system (dashboard, API, local server, factory apps)</li>
+        <li>Designed distributed sync between on-premise factory systems and cloud infrastructure</li>
+        <li>Implemented QR/Barcode product verification with secure API communication</li>
+        <li>Integrated Flutter mobile app and Next.js web frontend with backend services</li>
+        <li>Built JWT-based authentication with role-based access control</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Backend Developer — Social E-Commerce Platform</div>
+        <div class="exp-date">2022 — Present</div>
+      </div>
+      <div class="exp-company">Car Community Platform · Active Migration CI3 → Golang</div>
+      <ul class="exp-list">
+        <li>Re-architected full backend from CodeIgniter 3 to Golang with HMVC-inspired modular structure</li>
+        <li>Implemented Redis caching for products, events, sessions and city data to minimize DB load</li>
+        <li>Built voucher & discount engine with target audience segmentation and usage limit control</li>
+        <li>Integrated Flip payment gateway with webhook callback for real-time payment confirmation</li>
+        <li>Designed rate limiter (100 req/min per IP) and database indexing strategy for performance</li>
+        <li>Configured CI/CD pipeline via GitHub Actions with auto-deploy to VPS</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Backend Developer — ERP & POS System</div>
+        <div class="exp-date">2017 — 2021</div>
+      </div>
+      <div class="exp-company">Production System · 100+ Daily Transactions</div>
+      <ul class="exp-list">
+        <li>Developed accounting modules including journal entries, financial reporting, and ratio analysis</li>
+        <li>Integrated POS hardware with backend and real-time payment gateway synchronization</li>
+        <li>Handled 100+ daily transactions with high data accuracy and reliability</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Backend Developer — E-Commerce Platform</div>
+        <div class="exp-date">2015 — 2017</div>
+      </div>
+      <div class="exp-company">Development Project</div>
+      <ul class="exp-list">
+        <li>Developed full-stack e-commerce system with payment and logistics integration</li>
+        <li>Built order management system with real-time status tracking</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="section-label">Key Projects</div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-title">GO-REST — Social E-Commerce API</div>
+        <div class="project-badge">Active</div>
+      </div>
+      <div class="project-stack">Go · Gin · GORM · MySQL · Redis · Swagger · GitHub Actions</div>
+      <ul class="project-list">
+        <li>Re-architected backend from CodeIgniter 3 to Golang using clean HMVC-inspired modular architecture</li>
+        <li>JWT & Google OAuth2 authentication with Redis session management</li>
+        <li>Redis caching strategy for products, events, slider & city data — parallel warmup via goroutine & WaitGroup</li>
+        <li>Voucher & discount engine: target audience segmentation (NEW/EXISTING/ALL/PERIODIC), usage limit per user/total/daily, Redis session for checkout flow</li>
+        <li>Payment gateway (Flip) with full webhook callback for real-time payment confirmation</li>
+        <li>RajaOngkir integration for shipping cost calculation and AWB tracking</li>
+        <li>WhatsApp notification via Redis Pub/Sub (OTP, payment, event registration)</li>
+        <li>Rate limiter (100 req/min per IP) using Redis & ulule/limiter</li>
+        <li>Database indexing strategy across all tables for optimized query performance</li>
+        <li>Structured logging via Uber Zap, auto-generated Swagger docs via swaggo/swag</li>
+        <li>CI/CD pipeline via GitHub Actions with automated build & deployment to VPS</li>
+        <li>Cron job for automated cleanup of unpaid/expired orders</li>
+        <li>Load tested with k6 — sustained 724 req/s at 200 concurrent users, 0% failure rate</li>
+      </ul>
+      <div class="project-links">
+        <a class="project-link" href="https://goapi.dswip.com/swagger/index.html" target="_blank">↗ Live Demo (Swagger)</a>
+        <a class="project-link" href="https://github.com/s41173/gorest" target="_blank">↗ Repository (Private)</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-title">AsliBos Platform — Distributed Anti-Counterfeit System</div>
+        <div class="project-badge prod">Production</div>
+      </div>
+      <div class="project-stack">CodeIgniter · JWT · Flutter · Next.js · QR/Barcode · Cloud Sync</div>
+      <ul class="project-list">
+        <li>Multi-application system: dashboard, REST API, local server, and factory scanning apps</li>
+        <li>On-premise to cloud data synchronization for factory and distribution tracking</li>
+        <li>Secure QR/Barcode product verification with JWT-protected API endpoints</li>
+        <li>Cross-platform integration: Flutter mobile + Next.js web frontend</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-title">ERP & POS System</div>
+        <div class="project-badge prod">Production</div>
+      </div>
+      <div class="project-stack">PHP · MySQL · Payment Gateway · POS Hardware Integration</div>
+      <ul class="project-list">
+        <li>Full accounting system with journal entries, financial reporting, and ratio analysis</li>
+        <li>Real-time POS synchronization with payment gateway integration</li>
+        <li>100+ daily transactions processed with high accuracy</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ADDITIONAL -->
+  <div class="section">
+    <div class="section-label">Additional</div>
+
+    <div class="additional-item">
+      <div>
+        <div class="additional-title">Hacktiv8 Bootcamp</div>
+        <div class="additional-desc">Intensive backend development bootcamp — REST API with Express.js, modern JavaScript backend practices</div>
+      </div>
+      <div class="additional-date">2019</div>
+    </div>
+
+    <div class="additional-item">
+      <div>
+        <div class="additional-title">Facebook Developer Circle</div>
+        <div class="additional-desc">Community participation — ReactJS, React Native, state management concepts</div>
+      </div>
+      <div class="additional-date">2018</div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

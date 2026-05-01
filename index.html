@@ -99,31 +99,34 @@
           <h2 class="text-xs font-semibold tracking-widest text-gray-500 mb-4">PORTFOLIO</h2>
 
           <!-- Golang -->
-            <div class="mb-6">
-              <h3 class="font-semibold text-base">GO-REST (Social E-Commerce API)</h3>
-              <p class="text-xs text-gray-500 mb-2">
-                Designed and developed a modular REST API for community social e-commerce platform, 
-                migrated from CodeIgniter 3 to Go for improved performance and scalability.
-              </p>
-              <ul class="text-xs text-gray-700 mb-2 space-y-1">
-                <li>• Re-architected backend API from CodeIgniter 3 to Golang using clean HMVC-inspired modular architecture</li>
-                <li>• Implemented JWT & Google OAuth authentication with secure session handling via Redis</li>
-                <li>• Integrated payment gateway (Flip) with full webhook callback handling for real-time payment confirmation</li>
-                <li>• Integrated RajaOngkir for shipping cost calculation and AWB tracking</li>
-                <li>• Implemented Redis caching strategy for product & event data to reduce DB load</li>
-                <li>• Built WhatsApp notification service for OTP, payment, and event registration updates</li>
-                <li>• Designed rate limiter (100 req/min per IP) using Redis & ulule/limiter</li>
-                <li>• Configured database connection pooling for optimized performance under high traffic</li>
-                <li>• Built cron job for automated cleanup of unpaid orders</li>
-                <li>• Documented all endpoints using Swagger UI</li>
-                <li>• Implemented integration testing for real-world API scenarios</li>
-                <li>• Implemented structured logging using uber-go/zap for request tracing and error monitoring</li>
-                <li>• Configured CI/CD pipeline via GitHub Actions with automated build & deployment to VPS</li>
-                <li>Demo : <a class="text-blue-600" target="_blank" href="https://goapi.dswip.com/swagger/index.html">https://goapi.dswip.com/swagger/index.html</a></li>
-                <li>Repo (private) : <a class="text-blue-600" target="_blank" href="https://github.com/s41173/gorest/">https://github.com/s41173/gorest/</a></li>
-              </ul>
-            </div>
-            <!-- Golang -->
+          <div class="mb-6">
+            <h3 class="font-semibold text-base">GO-REST (Social E-Commerce API)</h3>
+            <p class="text-xs text-gray-500 mb-2">
+              Designed and developed a modular REST API for a car community social e-commerce platform, 
+              migrated from CodeIgniter 3 to Go for improved performance and scalability.
+            </p>
+            <ul class="text-xs text-gray-700 mb-2 space-y-1">
+              <li>• Re-architected backend API from CodeIgniter 3 to Golang (Gin, GORM) using clean HMVC-inspired modular architecture</li>
+              <li>• Implemented JWT & Google OAuth authentication with secure session handling via Redis</li>
+              <li>• Built voucher & discount engine with target audience segmentation (NEW/EXISTING/ALL/PERIODIC), usage limit control per user/total/daily, and Redis session for checkout flow</li>
+              <li>• Integrated payment gateway (Flip) with full webhook callback handling for real-time payment confirmation</li>
+              <li>• Integrated RajaOngkir for shipping cost calculation and AWB tracking</li>
+              <li>• Implemented Redis caching strategy for product, event, slider & city data — parallel warmup via goroutine & WaitGroup</li>
+              <li>• Built async WhatsApp notification service via Redis List queue (OTP, payment, event registration updates)</li>
+              <li>• Designed rate limiter (100 req/min per IP) using Redis & ulule/limiter</li>
+              <li>• Implemented database indexing strategy across all tables for optimized query performance</li>
+              <li>• Configured database connection pooling for optimized performance under high traffic</li>
+              <li>• Built cron job for automated cleanup of unpaid/expired orders</li>
+              <li>• Auto-generated API documentation using swaggo/swag (Swagger UI)</li>
+              <li>• Implemented structured logging using uber-go/zap for request tracing and error monitoring</li>
+              <li>• Implemented integration testing for real-world API scenarios</li>
+              <li>• Configured CI/CD pipeline via GitHub Actions with automated build & deployment to VPS</li>
+              <li>• Load tested with k6 — sustained 724 req/s at 200 concurrent users, 0% failure rate</li>
+              <li>Demo : <a class="text-blue-600" target="_blank" href="https://goapi.dswip.com/swagger/index.html">https://goapi.dswip.com/swagger/index.html</a></li>
+              <li>Repo (private) : <a class="text-blue-600" target="_blank" href="https://github.com/s41173/gorest/">https://github.com/s41173/gorest/</a></li>
+            </ul>
+          </div>
+          <!-- Golang -->
 
          <!-- ERP -->
           <div class="mb-6">
